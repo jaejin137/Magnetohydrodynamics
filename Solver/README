@@ -1,0 +1,16 @@
+0. Explanation on lower bound and upper bound a.k.s ilower,iupper, and so on.
+
+   Example: If the number of ghost cell is 3, then
+
+    ilower=-2                                              iupper=il+3
+       |                                                      |
+    ___|______________________________________________________|__
+   |   | |     |     ||     |     |     |     ||     |     |  |  |
+   |  -2 |  -1 |  0  ||  1  |  2  | ... |  il || il+1| il+2| il+3|  <--- cell number
+   |_____|_____|_____||_____|_____|_____|_____||_____|_____|_____|
+  -2    -1     0      1     2     3    il    il+1  il+2  il+3  il+4 <--- grid number
+   |_________________|                        |_________________|
+            |                                          |
+    ghost cell layers                          ghost cell layers
+  
+	In some subroutines, ilower is ilow and iupper is iupp.     
